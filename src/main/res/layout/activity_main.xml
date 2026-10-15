@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coinflow Fraud Example"
+            android:textColor="#05092E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#6B7280"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/getHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#165DFB"
+            android:text="Get x-device-id header"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/sendRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:text="Send request"
+            android:textAllCaps="false"
+            android:textColor="#165DFB"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SectionHeading"
+                android:text="X-DEVICE-ID" />
+
+            <TextView
+                android:id="@+id/deviceId"
+                style="@style/Mono" />
+
+            <TextView
+                style="@style/SectionHeading"
+                android:text="REQUEST HEADERS" />
+
+            <TextView
+                android:id="@+id/requestHeaders"
+                style="@style/Mono" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/responseSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SectionHeading"
+                android:text="RESPONSE" />
+
+            <TextView
+                android:id="@+id/response"
+                style="@style/Mono" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
